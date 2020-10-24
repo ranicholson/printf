@@ -12,14 +12,15 @@ int _printf(const char *format, ...)
 
 	va_start(arg_list, format);
 
-	while (format[i])
+	while (format[len])
 		++len;
 
 	for (i = 0; i < len; ++i)
 	{
 		if (format[i] == '%')
 		{
-			f_output(format[i + 1]);
+			f_output(format[i + 1], &arg_list);
+			i++;
 		}
 		else
 			_putchar(format[i]);
