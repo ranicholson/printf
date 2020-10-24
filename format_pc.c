@@ -4,7 +4,8 @@
  *
  */
 
-void format_pc(char pc)
+unsigned int format_pc(void)
 {
-	_putchar(pc);
+	_putchar('%');
+	return (1);
 }

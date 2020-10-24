@@ -4,7 +4,9 @@
  *
  */
 
-void format_c(char c)
+unsigned int format_c(char c)
 {
 	_putchar(c);
+
+	return (1);
 }

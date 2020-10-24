@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 	va_list arg_list;
-	unsigned int i = 0, len = 0;
+	unsigned int i = 0, len = 0, cc = 0;
 
 	va_start(arg_list, format);
 
@@ -19,12 +19,16 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			f_output(format[i + 1], &arg_list);
+			cc += f_output(format[i + 1], &arg_list);
 			i++;
+			va_arg(arg_list, int);
 		}
 		else
+		{
 			_putchar(format[i]);
+			cc++;
+		}
 	}
 	va_end(arg_list);
-	return (0);
+	return (cc);
 }
