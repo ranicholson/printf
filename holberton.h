@@ -8,11 +8,11 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-unsigned int f_output(char f, va_list *arg_list);
-unsigned int format_c(char);
-unsigned int format_s(char *);
-unsigned int format_pc(void);
-unsigned int print_number10(int n);
-unsigned int format_di(int);
+int f_output(char f, va_list *arg_list);
+int format_c(char);
+int format_s(char *);
+int format_pc(void);
+int print_number10(int n);
+int format_di(int);
 
 #endif

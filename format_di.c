@@ -7,9 +7,9 @@
  * Return: number of characters printed
  */
 
-unsigned int format_di(int a)
+int format_di(int a)
 {
-	unsigned int cc;
+	int cc;
 
 	cc = print_number10(a);
 

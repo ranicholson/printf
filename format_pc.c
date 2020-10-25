@@ -6,7 +6,7 @@
  * Return: number of characters printed
  */
 
-unsigned int format_pc(void)
+int format_pc(void)
 {
 	_putchar('%');
 	return (1);

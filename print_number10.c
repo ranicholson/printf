@@ -7,9 +7,9 @@
  * Return: number of characters printed
  */
 
-unsigned int print_number10(int n)
+int print_number10(int n)
 {
-	unsigned int cc = 0;
+	int cc = 0;
 
 	if (n / 10 == 0 && n < 0)
 	{

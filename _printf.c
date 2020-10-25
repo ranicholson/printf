@@ -11,7 +11,8 @@
 int _printf(const char *format, ...)
 {
 	va_list arg_list;
-	unsigned int i = 0, len = 0, cc = 0;
+	unsigned int i = 0, len = 0;
+	int cc = 0;
 
 	va_start(arg_list, format);
 

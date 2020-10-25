@@ -8,11 +8,11 @@
  * Return: number of characters printed
  */
 
-unsigned int f_output(char f, va_list *arg_list)
+int f_output(char f, va_list *arg_list)
 {
 	char c;
 	char *s;
-	unsigned int cc = 0;
+	int cc = 0;
 	int d;
 
 	switch (f)

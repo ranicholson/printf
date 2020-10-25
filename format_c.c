@@ -7,7 +7,7 @@
  * Return: number of characters printed
  */
 
-unsigned int format_c(char c)
+int format_c(char c)
 {
 	_putchar(c);
 

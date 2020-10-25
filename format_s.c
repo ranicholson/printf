@@ -7,9 +7,15 @@
  * Return: number of characters printed
  */
 
-unsigned int format_s(char *s)
+int format_s(char *s)
 {
-	unsigned int i, cc = 0;
+	int i, cc = 0;
+
+	if (s == NULL)
+	{
+		_printf("(null)");
+		return (6);
+	}
 
 	for (i = 0; s[i] != '\0'; ++i)
 	{
