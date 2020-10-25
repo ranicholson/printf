@@ -1,38 +1,39 @@
 #include "holberton.h"
 
 /**
+ * f_output - chooses formatting function based on specifier
+ * @f: format specifier
+ * @arg_list: list of arguments used to replace format specifiers in string
  *
+ * Return: number of characters printed
  */
 
 unsigned int f_output(char f, va_list *arg_list)
 {
-	va_list arg_list1;
 	char c;
 	char *s;
 	unsigned int cc = 0;
 	int d;
 
-	va_copy(arg_list1, *arg_list);
 	switch (f)
 	{
 	case 'c':
-		c = va_arg(arg_list1, int);
+		c = va_arg(arg_list, int);
 		cc += format_c(c);
 		break;
 	case 's':
-		s = va_arg(arg_list1, char *);
+		s = va_arg(arg_list, char *);
 		cc += format_s(s);
 		break;
 	case '%':
-		va_arg(arg_list1, int);
+		va_arg(arg_list, int);
 		cc += format_pc();
 		break;
-	case 'i' :
-	case 'd' :
-		d = va_arg(arg_list1, int);
+	case 'i':
+	case 'd':
+		d = va_arg(arg_list, int);
 		cc += format_di(d);
 		break;
 	}
-	va_end(arg_list1);
 	return (cc);
 }

@@ -1,7 +1,10 @@
 #include "holberton.h"
 
 /**
+ * format_s - prints a string
+ * @s: pointer to string to be printed
  *
+ * Return: number of characters printed
  */
 
 unsigned int format_s(char *s)

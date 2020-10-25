@@ -1,8 +1,11 @@
 #include "holberton.h"
 
 /**
- * _printf - uses format specifier to pick function
+ * _printf - parses input string and calls f_output to choose which function
+ * to use for formatting based on specifiers
+ * @format: pointer to string containing specifiers
  *
+ * Return: number of characters printed
  */
 
 int _printf(const char *format, ...)
@@ -21,7 +24,6 @@ int _printf(const char *format, ...)
 		{
 			cc += f_output(format[i + 1], &arg_list);
 			i++;
-			va_arg(arg_list, int);
 		}
 		else
 		{

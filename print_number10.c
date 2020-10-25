@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * print_number - prints an integer
- * @n: n is the number to print
+ * print_number10 - prints an integer in base 10
+ * @n: integer to print
  *
- * Return: none
+ * Return: number of characters printed
  */
 
 unsigned int print_number10(int n)
