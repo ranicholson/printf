@@ -11,7 +11,7 @@ int main(void)
 	int b = -100;
 	int c = 0x09;
 	int d = 010;
-	int cc;
+	int cc, dd;
 
 	_printf("Hello %c\n", t);
 	_printf("%s", str);
@@ -30,7 +30,9 @@ int main(void)
 	cc =_printf("%\n");
 	printf("%d\n", cc);
 	printf("test2\n");
-	_printf("%s %s %s", "real", NULL, "real1\n");
+	_printf("%%%%%%%%%\n", 1, "blah");
+	dd = printf("%%%%%%%%%\n", 1, "blah");
+	printf("%d\n", dd);
 
 	return (0);
 }

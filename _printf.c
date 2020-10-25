@@ -27,7 +27,11 @@ int _printf(const char *format, ...)
 		{
 			ret = f_output(format[i + 1], &arg_list);
 			if (ret < 0)
-				return (-1);
+			{
+				_putchar('%');
+				if (format[i + 1] != '\0')
+					_putchar(format[i + 1]);
+			}
 			cc += ret;
 			i++;
 		}
