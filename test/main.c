@@ -22,11 +22,15 @@ int main(void)
 	_printf("%s\n", nstr);
 	_printf("%s\n", mpt);
 	_printf("%c\n", q);
-	_printf("This is a test of %");
-	printf("This is a test of %");
+	_printf("foo %d bar %", 1);
+	printf("\n");
+	printf("foo %d bar %", 1);
+	printf("\n");
 	printf("pf%\n");
 	cc =_printf("%\n");
 	printf("%d\n", cc);
+	printf("test2\n");
+	_printf("%s %s %s", "real", NULL, "real1\n");
 
 	return (0);
 }

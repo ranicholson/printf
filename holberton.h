@@ -9,7 +9,7 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 int f_output(char f, va_list *arg_list);
-int format_c(char);
+int format_c(unsigned char);
 int format_s(char *);
 int format_pc(void);
 int print_number10(int n);

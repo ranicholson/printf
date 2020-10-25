@@ -10,7 +10,7 @@
 
 int f_output(char f, va_list *arg_list)
 {
-	char c;
+	unsigned char c;
 	char *s;
 	int cc = 0;
 	int d;
