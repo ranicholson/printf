@@ -12,10 +12,12 @@ int _printf(const char *format, ...)
 {
 	va_list arg_list;
 	unsigned int i = 0, len = 0;
-	int cc = 0;
+	int cc = 0, ret = 0;
+
+	if (!format)
+		return (-1);
 
 	va_start(arg_list, format);
-
 	while (format[len])
 		++len;
 
@@ -23,7 +25,10 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			cc += f_output(format[i + 1], &arg_list);
+			ret = f_output(format[i + 1], &arg_list);
+			if (ret < 0)
+				return (-1);
+			cc += ret;
 			i++;
 		}
 		else

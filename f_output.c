@@ -33,6 +33,8 @@ int f_output(char f, va_list *arg_list)
 		d = va_arg(arg_list, int);
 		cc += format_di(d);
 		break;
+	default:
+		return (-1);
 	}
 	return (cc);
 }
