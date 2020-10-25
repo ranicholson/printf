@@ -26,7 +26,6 @@ int f_output(char f, va_list *arg_list)
 		cc += format_s(s);
 		break;
 	case '%':
-		va_arg(arg_list, int);
 		cc += format_pc();
 		break;
 	case 'i':
