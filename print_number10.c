@@ -18,10 +18,7 @@ unsigned int print_number10(int n)
 	}
 
 	if (n / 10)
-	{
 		print_number10(n / 10);
-		cc++;
-	}
 
 	if (n % 10 < 0)
 	{
