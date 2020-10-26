@@ -8,7 +8,7 @@
 int format_R(char *str)
 {
 
-	int x, y, b, cc = 0;
+	int x, y, cc = 0, b;
 	char z[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *rstr;
@@ -18,11 +18,10 @@ int format_R(char *str)
 		_printf("(null)");
 		return (6);
 	}
-
 	for (b = 0; str[b]; b++)
 		;
-
 	rstr = malloc(sizeof(char) * (b + 1));
+	_strcpy(rstr, str);
 
 	for (x = 0; str[x] != '\0'; x++)
 	{
@@ -33,8 +32,6 @@ int format_R(char *str)
 				rstr[x] = z[y];
 				break;
 			}
-			else
-				rstr[x] = str[x];
 		}
 		_putchar(rstr[x]);
 		cc++;
