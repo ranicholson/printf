@@ -8,17 +8,21 @@
 int format_R(char *str)
 {
 
-	int x, y, cc = 0;
+	int x, y, b, cc = 0;
 	char z[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char *rstr = malloc(sizeof(str));
+	char *rstr;
 
 	if (str == NULL)
 	{
 		_printf("(null)");
-		free(rstr);
 		return (6);
 	}
+
+	for (b = 0; str[b]; b++)
+		;
+
+	rstr = malloc(sizeof(char) * (b + 1));
 
 	for (x = 0; str[x] != '\0'; x++)
 	{
