@@ -11,7 +11,7 @@
 int f_output(char f, va_list *arg_list)
 {
 	unsigned char c;
-	char *s;
+	char *s, *r, *R;
 	int cc = 0;
 	int d;
 
@@ -32,6 +32,14 @@ int f_output(char f, va_list *arg_list)
 	case 'd':
 		d = va_arg(arg_list, int);
 		cc += format_di(d);
+		break;
+	case 'r':
+		r = va_arg(arg_list, char *);
+		cc += format_r(r);
+		break;
+	case 'R':
+		R = va_arg(arg_list, char *);
+		cc += format_R(R);
 		break;
 	default:
 		cc += format_literal(f);
