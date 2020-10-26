@@ -14,5 +14,6 @@ int format_s(char *);
 int format_pc(void);
 int print_number10(int n);
 int format_di(int);
+int format_literal(char);
 
 #endif
