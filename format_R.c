@@ -39,6 +39,7 @@ int format_R(char *str)
 		_putchar(rstr[x]);
 		cc++;
 	}
+	rstr[x] = '\0';
 	free(rstr);
 	return (cc);
 }
