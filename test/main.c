@@ -15,7 +15,6 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 	char *nstr = NULL;
-<<<<<<< HEAD
 	char *estr = "";
 
 	len = _printf("Let's try to printf a simple sentence.\n");
@@ -61,36 +60,5 @@ int main(void)
 	x = _printf("/%\n");
 	y = printf("/%\n");
 	printf("_printf %d || printf %d\n", x, y); 
-=======
-	char *mpt = "";
-	int a = 100;
-	int b = -100;
-	int c = 0x09;
-	int d = 010;
-	int cc, dd;
-
-	_printf("Hello %c\n", t);
-	_printf("%s", str);
-	_printf("%%%s\n", "test");
-	_printf("\\ \' \" \?\n");
-	_printf("%d, %d, %i, %i\n", a, b, c, d);
-	_printf("%s, %c, %%\n", "test", 't');
-	_printf("%s\n", nstr);
-	_printf("%s\n", mpt);
-	_printf("%c\n", q);
-	_printf("foo %d bar %", 1);
-	printf("\n");
-	printf("foo %d bar %", 1);
-	printf("\n");
-	printf("pf%\n");
-	cc =_printf("%\n");
-	printf("%d\n", cc);
-	printf("test2\n");
-	cc = printf("%                        v\n");
-	dd = _printf("%                        v\n");
-	printf("real: %d\n", cc);
-	printf("ours: %d\n", dd);
->>>>>>> b375cd13ebc28f32818e486c6ac32015b2a5ed4c
-
 	return (0);
 }

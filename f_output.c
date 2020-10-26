@@ -46,6 +46,41 @@ int f_output(char f, va_list *arg_list)
 		cc += format_b(b);
 		break;
 	default:
+		cc += f_output1(f, arg_list);
+		break;
+	}
+	return (cc);
+}
+
+/**
+ *
+ *
+ */
+
+int f_output1(char f, va_list *arg_list)
+{
+	int cc = 0;
+	unsigned int o, u, x, X;
+
+	switch (f)
+	{
+	case 'o':
+		o = va_arg(arg_list, unsigned int);
+		cc += format_o(o);
+		break;
+	case 'u':
+		u = va_arg(arg_list, unsigned int);
+		cc += format_u(u);
+		break;
+	case 'x':
+		x = va_arg(arg_list, unsigned int);
+		cc += format_xX(x, 'l');
+		break;
+	case 'X':
+		X = va_arg(arg_list, unsigned int);
+		cc += format_xX(X, 'u');
+		break;
+	default:
 		cc += format_literal(f);
 		break;
 	}
