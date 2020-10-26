@@ -53,8 +53,11 @@ int f_output(char f, va_list *arg_list)
 }
 
 /**
+ * f_output1 - chooses formatting function based on specifier
+ * @f: format specifier
+ * @arg_list: list of arguments used to replace format specifiers in string
  *
- *
+ * Return: number of characters printed
  */
 
 int f_output1(char f, va_list *arg_list)
