@@ -17,5 +17,6 @@ int format_di(int);
 int format_literal(char);
 int format_r(char *str);
 int format_R(char *str);
+char *_strcpy(char *dest, char *src);
 
 #endif
