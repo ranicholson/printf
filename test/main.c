@@ -30,9 +30,10 @@ int main(void)
 	cc =_printf("%\n");
 	printf("%d\n", cc);
 	printf("test2\n");
-	_printf("%%%%%%%%%\n", 1, "blah");
-	dd = printf("%%%%%%%%%\n", 1, "blah");
-	printf("%d\n", dd);
+	cc = printf("%                        v\n");
+	dd = _printf("%                        v\n");
+	printf("real: %d\n", cc);
+	printf("ours: %d\n", dd);
 
 	return (0);
 }

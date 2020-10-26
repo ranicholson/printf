@@ -25,11 +25,15 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			ret = f_output(format[i + 1], &arg_list);
+			++i;
+			while (format[i] == ' ')
+				i++;
+			if (format[i] == '\0')
+				return (-1);
+			ret = f_output(format[i], &arg_list);
 			if (ret < 0)
 				return (-1);
 			cc += ret;
-			i++;
 		}
 		else
 		{

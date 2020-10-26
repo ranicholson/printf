@@ -34,7 +34,8 @@ int f_output(char f, va_list *arg_list)
 		cc += format_di(d);
 		break;
 	default:
-		return (-1);
+		cc += format_literal(f);
+		break;
 	}
 	return (cc);
 }
