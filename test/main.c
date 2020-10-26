@@ -12,8 +12,8 @@ int main(void)
 	int len;
 	int len2;
 	int x, y;
-	unsigned int ui;
 	void *addr;
+	unsigned int ui;
 	char *nstr = NULL;
 	char *estr = "";
 

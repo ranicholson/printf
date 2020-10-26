@@ -64,6 +64,7 @@ int f_output1(char f, va_list *arg_list)
 {
 	int cc = 0;
 	unsigned int o, u, x, X;
+	void *p;
 
 	switch (f)
 	{
@@ -82,6 +83,10 @@ int f_output1(char f, va_list *arg_list)
 	case 'X':
 		X = va_arg(arg_list, unsigned int);
 		cc += format_xX(X, 'u');
+		break;
+	case 'p':
+		p = va_arg(arg_list, void *);
+		cc += format_p(p);
 		break;
 	default:
 		cc += format_literal(f);

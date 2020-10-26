@@ -22,5 +22,7 @@ int format_b(unsigned int);
 int format_o(unsigned int);
 int format_u(unsigned int);
 int format_xX(unsigned int, char);
+int format_p(void *);
+int format_p_helper(unsigned long int);
 
 #endif
