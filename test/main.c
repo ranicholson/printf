@@ -61,5 +61,7 @@ int main(void)
 	y = printf("/%\n");
 	printf("_printf %d || printf %d\n", x, y); 
 	_printf("%S\n", "HolbertonüSchool");
+	_printf("%R\n", NULL);
+	_printf("%R\n", "abcdef1XYZ");
 	return (0);
 }

@@ -10,10 +10,20 @@
 .B , ...);
 .SH DESCRIPTION
 .B_printf
-generates output according to the
+Generates output according to the
 .I format
-described below. It writes output It writes output to the standard output stream, i.e.
+described below. It writes output based on a
+.I format
+string that contains specifiers that dictate how arguments are converted for printing. It writes output to the standard output stream, i.e.
 .I stdout.
+.SS Format of the format string
+The format string is a character string. It can contain directives, which are characters (aside from %) that are copied to
+.I stdout.
+It can also contain conversion specifiers which get subsequent arguments. A conversion specifier begins with
+.B %
+and ends with the conversion specifier itself, which is either a letter or a
+.B %.
+The listed arguments must have the appropriate type for the conversion specifier. The arguments are accessed in the order they are given.
 .SS Conversion specifiers
 Conversion specifiers are characters that specify how the output is to be formatted.
 Conversion specifiers will always be preceeded by
@@ -48,7 +58,7 @@ to signed decimal notation.
 - Converts
 .I unsigned integer
 to unsigned octal.
-.IP
+.P
 .B p
 - Prints the
 .I void *
@@ -56,7 +66,7 @@ in hexadecimal.
 .P
 .B r
 - reverses and then prints a string.
-.IP
+.P
 .B R
 - prints a string using rot13 encryption.
 .P
@@ -67,7 +77,7 @@ string up to a terminating null byte('0').
 .P
 .B S
 - prints a string, but will replace any non-printable ASCII value with the value's hex equivalent.
-.IP
+.P
 .B u
 - Converts an
 .I unsigned int
@@ -87,10 +97,20 @@ The return value is equal to the number of characters printed by the function.
 .P
 Upon encountering an error the return value will be -1.
 .SH ERRORS
-Currently no known errors.(Will remove section if nothing needs to be documented.
-
-.SH VERSIONS
-Not sure if this section is needed.
-
+In the event of an error, i.e. if the write system call fails, errno will be set to -1.
+.SH BUGS
+If you use a format speicifer in the format string but do not include arguements, behavior is undefined.
+.SH EXAMPLE
+To print and integer 4, then a comma, then a space, then the character "t":
+.P
+.EX
+#include "holberton.h"
+int main(void)
+{
+	char ex = 't';
+	printf("%d, %c", 4, ex);
+	return (0);
+}
+.EE
 .SH SEE ALSO
 printf(3)
