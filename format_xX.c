@@ -1,7 +1,11 @@
 #include "holberton.h"
 
 /**
+ * format_xX - prints an unsigned int in hexadecimal
+ * @n: int to be printed
+ * @flag: tells function whether to print in uppercase or lowercase
  *
+ * Return: number of characters printed
  */
 
 int format_xX(unsigned int n, char flag)

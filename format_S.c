@@ -1,7 +1,11 @@
 #include "holberton.h"
 
 /**
+ * format_S - prints a string with non-printable characters printed as "\x"
+ * followed by the ASCII code value in hexadecimal
+ * @s: string to be printed
  *
+ * Return: number of characters printed
  */
 
 int format_S(char *s)

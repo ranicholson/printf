@@ -1,8 +1,10 @@
 #include "holberton.h"
 
 /**
+ * format_R - encodes a string using ROT13 encryption and prints it
+ * @str: string to be encrypted
  *
- *
+ * Return: nunber of characters printed
  */
 
 int format_R(char *str)

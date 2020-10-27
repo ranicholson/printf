@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
+ * format_r - prints a string in reverse
+ * @str: string to be reversed and printed
  *
- *
- *
+ * Return: number of characters printed
  */
 
 int format_r(char *str)

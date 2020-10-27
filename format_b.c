@@ -1,8 +1,10 @@
 #include "holberton.h"
 
 /**
+ * format_b - prints an unsigned int in binary
+ * @a: unsigned int to be printed in binary
  *
- *
+ * Return: number of characters printed
  */
 
 int format_b(unsigned int a)

@@ -1,8 +1,10 @@
 #include "holberton.h"
 
 /**
+ * format_o - prints an unsigned int in octal
+ * @n: int to be printed
  *
- *
+ * Return: number of characters printed
  */
 
 int format_o(unsigned int n)
