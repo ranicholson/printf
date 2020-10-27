@@ -20,7 +20,7 @@ int main(void)
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	ui = (unsigned int)INT_MAX + 1024;
-	addr = (void *)0x7ffe637541f0;
+	addr = (void *)0;
 	x = _printf("Length:[%d, %i]\n", len, len);
 	y = printf("Length:[%d, %i]\n", len2, len2);
 	printf("_printf %d || printf %d\n", x, y);
@@ -60,5 +60,6 @@ int main(void)
 	x = _printf("/%\n");
 	y = printf("/%\n");
 	printf("_printf %d || printf %d\n", x, y); 
+	_printf("%S\n", "HolbertonüSchool");
 	return (0);
 }

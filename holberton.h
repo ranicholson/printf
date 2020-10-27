@@ -24,5 +24,6 @@ int format_u(unsigned int);
 int format_xX(unsigned int, char);
 int format_p(void *);
 int format_p_helper(unsigned long int);
+int format_S(char *);
 
 #endif
