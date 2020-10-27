@@ -16,10 +16,7 @@ int format_R(char *str)
 	char *rstr;
 
 	if (str == NULL)
-	{
-		_printf("(null)");
-		return (6);
-	}
+		str = "(null)";
 	for (b = 0; str[b]; b++)
 		;
 	rstr = malloc(sizeof(char) * (b + 1));

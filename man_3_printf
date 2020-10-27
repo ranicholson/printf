@@ -9,38 +9,41 @@
 .I *format
 .B , ...);
 .SH DESCRIPTION
+.B_printf
+generates output according to the
+.I format
+described below. It writes output It writes output to the standard output stream, i.e.
+.I stdout.
 .SS Conversion specifiers
 Conversion specifiers are characters that specify how the output is to be formatted.
 Conversion specifiers will always be preceeded by
-.B %
-.
-.PThe conversion specifiers and their purposes are:
-.IP
+.B %.
+.P
+The conversion specifiers and their purposes are:
+.P
 .B %
 - A
 .B %
 following a
 .B %
 will output a single
-.B %
-.
-.IP
+.B %.
+.P
 .B b
 - Converts an
 .I unsigned int
 to binary.
-.IP
+.P
 .B c
 - Converts argument to an
-.I char
-.
-.IP
+.I char.
+.P
 .B d,
 .B i
 - Converts
 .I int
 to signed decimal notation.
-.IP
+.P
 .B o
 - Converts
 .I unsigned integer
@@ -50,18 +53,18 @@ to unsigned octal.
 - Prints the
 .I void *
 in hexadecimal.
-.IP
+.P
 .B r
 - reverses and then prints a string.
 .IP
 .B R
 - prints a string using rot13 encryption.
-.IP
+.P
 .B s
 - Writes characters from a
 .I char
 string up to a terminating null byte('0').
-.IP
+.P
 .B S
 - prints a string, but will replace any non-printable ASCII value with the value's hex equivalent.
 .IP
@@ -69,12 +72,12 @@ string up to a terminating null byte('0').
 - Converts an
 .I unsigned int
 to unsigned decimal.
-.IP
+.P
 .B x
 - Converts an
 .I unsigned int
 to hexadecimal notation using abcdef.
-.IP
+.P
 .B X
 - Converts an
 .I unsigned int
