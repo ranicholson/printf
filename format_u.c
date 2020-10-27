@@ -1,7 +1,10 @@
 #include "holberton.h"
 
 /**
+ * format_u - prints an unsigned int in decimal
+ * @n: int to be printed
  *
+ * Return: number of characters printed
  */
 
 int format_u(unsigned int n)

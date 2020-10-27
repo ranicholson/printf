@@ -1,7 +1,10 @@
 #include "holberton.h"
 
 /**
+ * format_p_helper - prints address of void pointer in hexadecimal
+ * @n: address of void pointer
  *
+ * Return: number of characters printed
  */
 
 int format_p_helper(unsigned long int n)
