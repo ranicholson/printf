@@ -10,32 +10,29 @@
 int format_R(char *str)
 {
 
-	int x, y, cc = 0, b;
+	int x, y, cc = 0;
 	char z[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char *rstr;
 
 	if (str == NULL)
-		str = "(null)";
-	for (b = 0; str[b]; b++)
-		;
-	rstr = malloc(sizeof(char) * (b + 1));
-	_strcpy(rstr, str);
+		return (_printf("(null)"));
 
 	for (x = 0; str[x] != '\0'; x++)
 	{
-		for (y = 0; a[y] != '\0'; y++)
+		for (y = 0; y < 52; y++)
 		{
 			if (str[x] == a[y])
 			{
-				rstr[x] = z[y];
+				_putchar(z[y]);
+				cc++;
 				break;
 			}
 		}
-		_putchar(rstr[x]);
-		cc++;
+		if (a[y] == '\0')
+		{
+			_putchar(str[x]);
+			cc++;
+		}
 	}
-	rstr[x] = '\0';
-	free(rstr);
 	return (cc);
 }
