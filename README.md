@@ -22,7 +22,7 @@ _printf mimics printf. _printf writes output to stdout based on a format string 
 - man_3_printf: man page for _printf function
 
 Example usage:
-- To print and integer 4, then a comma, then a space, then the character "t":
+- To print an integer 4, then a comma, then a space, then the character "t":
 ```
 #include "holberton.h"
 int main(void)
@@ -32,3 +32,5 @@ int main(void)
 	return (0);
 }
 ```
+- Output:
+4, t

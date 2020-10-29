@@ -101,14 +101,14 @@ In the event of an error, i.e. if the write system call fails, errno will be set
 .SH BUGS
 If you use a format speicifer in the format string but do not include arguements, behavior is undefined.
 .SH EXAMPLE
-To print and integer 4, then a comma, then a space, then the character "t":
+To print an integer 4, then a comma, then a space, then the character "t":
 .P
 .EX
 #include "holberton.h"
 int main(void)
 {
 	char ex = 't';
-	printf("%d, %c", 4, ex);
+	_printf("%d, %c", 4, ex);
 	return (0);
 }
 .EE
