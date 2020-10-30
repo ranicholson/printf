@@ -1,6 +1,6 @@
 # Holberton _printf project
 
-_printf mimics printf. _printf writes output to stdout based on a format string that contains specifiers that dictate how arguments are converted for printing.
+_printf mimics printf. _printf writes output to stdout based on a format string that contains specifiers that dictate how arguments are converted for printing. To use one or more format specifiers, type "%<specifier>" in the format string and list the arguments after the format string in the order they appear in the format string. An example is provided at the bottom of the README.
 
 - _printf: parses input string and calls f_output to choose which function to use for formatting based on specifiers within input string
 - _putchar: writes a character to stdout
